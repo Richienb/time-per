@@ -1,13 +1,6 @@
 import test from "ava"
-import theModule from "."
+import timePer from "."
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
-
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    t.is(timePer(2, 15, 60), 8)
 })

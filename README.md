@@ -1,41 +1,45 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Times per timeframe [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/time-per/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/time-per)
 
-My awesome module.
+Assuming an operation was completed a specific amount of times in a timeframe, calculate the operations on average that were completed every specified unit of time.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/time-per.png)](https://npmjs.com/package/time-per)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install time-per
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const timePer = require("time-per")
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+const timesPressed = 2
+const secsPassed = 15
+
+`User will press the button ${timePer(timesPressed, secsPassed, 60)} per minute`
+//=> "User will press the button 8 times per minute"
 ```
 
 ## API
 
-### theModule(input, options?)
+### timePer(num, time, est)
 
-#### input
+#### num
 
-Type: `string`
+Type: `number`
 
-Lorem ipsum.
+The amount of times the operation was completed.
 
-#### options
+#### time
 
-Type: `object`
+Type: `number`
 
-##### postfix
+The amount of time it took for all the operations to complete.
 
-Type: `string`\
-Default: `rainbows`
+##### est
 
-Lorem ipsum.
+Type: `number`
+
+The units of time to estimate the operation amount for.
