@@ -38,7 +38,7 @@ Type: `number`
 
 The amount of time it took for all the operations to complete.
 
-##### est
+#### est
 
 Type: `number`
 
